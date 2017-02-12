@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+    <meta name="author" content="">
+    <title>WeatherApp</title>
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">WeatherApp</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Prognoza pogody</h1>
+        <div class="media">
+          <div class="media-left">
+            <!--<img class="media-object" src="img/cloud.png" alt="cloud">-->
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading" id="cityName">Poznań</h4>
+            <h5>w dzień...</h4>
+            <p class="day">wczytuję dane...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Wykres pogodowy</h2>
+          <p>Poniższy wykres przedstawia wahania temperatur w najbliższym tygodniu.</p>
+          <div class="weather_chart1"></div>
+
+          <h3>Zmiana miasta</h3>
+          <p><strong>Obecnie do wyboru w aplikacji WeatherApp są następujące miejsca:</strong></p>
+          <div class="form-group">
+            <select class="form-control" id="select">
+              <option>Poznań</option>
+              <option>Madryt</option>
+              <option>Barcelona</option>
+            </select>
+          </div>
+          <p><a class="btn btn-success" href="#" role="button" id="reset">Zmień miasto &raquo;</a></p>
+          <hr>
+         <p>Dane pogodowe pochodzą z serwisu OpenweatherMap.</p>
+          <p><a class="btn btn-default" href="https://openweathermap.org/" role="button" target="_blank">Kliknij, aby przejść &raquo;</a></p>
+        </div>
+
+        <div class="col-md-4 side-chart">
+          <h4>Pogoda na dziś</h4>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>W dzień: </strong><span class="day"></span></li>
+            <li class="list-group-item"><strong>Temp. maksymalna: </strong><span class="max"></span></li>
+            <li class="list-group-item"><strong>Temp. minimalna: </strong><span  class="min"></span></li>
+            <li class="list-group-item"><strong>W nocy: </strong><span class="night"></span></li>
+            <li class="list-group-item"><strong>Ciśnienie: </strong><span class="pressure"></span></li>
+            <li class="list-group-item"><strong>Wilgotność: </strong><span  class="humidity"></span></li>
+            <li class="list-group-item"><strong>Zachmnurzenie: </strong><span class="clouds"></span></li>
+            <li class="list-group-item"><strong>Wiatr: </strong><span class="speed"></span></li>
+            <li class="list-group-item"><strong>Deszcz (mm): </strong><span class="rain"></span></li>
+            <li class="list-group-item"><strong>Śnieg (mm): </strong><span class="snow"></span></li>
+          </ul>
+          <h4>Wykres słupkowy</h4>
+          <div class="weather_chart"></div>
+       </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; WeatherApp 2016</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+  </body>
+</html>
+
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="js/index.js"></script>
+
+</body>
+</html>

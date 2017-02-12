@@ -1,0 +1,132 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min';
+
+body{
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+h5{
+  color: rgba(255, 255, 255, 0.87)
+}
+
+.cold{
+  fill: #5FA7F9;
+}
+.hot{
+  fill: #FF5400;
+}
+.axis text {
+  font: 10px sans-serif;
+}
+.axis path,
+.axis line, 
+.line {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+.side-chart .axis path,
+.side-chart .axis line{
+  stroke: #000;  
+}
+
+.weather_chart1{
+  display: inline-block;
+ position: relative;
+ width: 100%;
+ padding-bottom: 50%; /* depends on svg ratio, for my zebra height/width = 1.2 so padding-bottom = 50% * 1.2 = 60% */
+ 
+ vertical-align: middle; /* top | middle | bottom ... do what you want */
+
+ svg{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* only required for <img /> */
+ }
+}
+
+text {
+  paint-order: stroke;
+  stroke-width: 1px;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  letter-spacing: 1px;
+}
+
+.jumbotron{
+  background-image: url('../img/sky-1107952_1920.jpg');
+  background-position: center center;
+  border-bottom: #222 solid 3px;
+
+  @media screen and (min-width: 768px){
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .jumbotron .h1, .jumbotron h1 {
+    font-size: 49px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.63);
+}}
+
+.media {
+margin-top: 0;
+  max-width: 230px;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 35px 10px 30px 20px;
+  border-radius: 5px;
+}
+
+.media-heading{
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.87)
+}
+
+svg{
+  margin-bottom: 45px;
+}
+
+.side-chart{
+  h4,p{text-align: center;}
+  svg{
+  display: block;
+  margin: 0 auto 20px;
+  }
+}
+
+.media-object {
+    max-width: 120px;
+}
+
+.jumbotron p {
+    margin-bottom: 0;
+    font-size: 39px;
+    color: rgba(255, 255, 255, 0.87)
+}
+
+
+.list-group{
+  margin-bottom: 35px;
+}
+
+.list-group-item:nth-child(odd) {
+    background: #f3f3f3;
+}
+
+@media (max-width:991px){
+  .side-chart h4{
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 330px){
+  .side-chart svg{
+    transform: scale(0.8) translateX(-25px);
+  }
+}
+
